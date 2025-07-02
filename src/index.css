@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: GeistMono;
+  src: url("../src/shared/fonts/GeistMono-VariableFont_wght.ttf");
+}
+
+@theme {
+  --color-base-bg: #f7f7f7;
+}
