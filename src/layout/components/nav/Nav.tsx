@@ -8,7 +8,7 @@ interface Props {
 
 const Nav: FC<Props> = ({ setShow, show }) => {
   return (
-    <div className="w-full h-14 bg-white sticky top-0 left-0 flex items-center px-4 shadow">
+    <div className="w-full h-14 bg-white sticky top-0 left-0 flex items-center px-4 z-10 border-b border-gray-200">
       <button
         onClick={() => setShow((p) => !p)}
         className="text-xl cursor-pointer">
