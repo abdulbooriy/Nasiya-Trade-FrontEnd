@@ -4,6 +4,8 @@ import React from "react";
 import { usePartner } from "../service/usePartner";
 import PartnerWrapper from "../components/partner-wrapper/PartnerWrapper";
 import { useParamsHook } from "@/shared/hooks/useParamsHook";
+import { Badge } from "antd";
+import Navigation from "../components/navigation/Navigation";
 
 const Partner = ({ role }: { role: string }) => {
   const { getPartners } = usePartner();
@@ -14,9 +16,12 @@ const Partner = ({ role }: { role: string }) => {
 
   return (
     <Box>
-      <Title className={"mb-4"}>
-        {role === "customer" ? "Mijozlar" : "Sotuvchilar"} ro'yhati
-      </Title>
+      <Badge count={data?.total} style={{ backgroundColor: "#000" }}>
+        <Title className={"mb-4"}>
+          {role === "customer" ? "Mijozlar" : "Sotuvchilar"} ro'yhati
+        </Title>
+      </Badge>
+      <Navigation />
       <PartnerWrapper data={data} loading={isPending} />
     </Box>
   );

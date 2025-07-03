@@ -21,7 +21,7 @@ const MainLayout = () => {
   return (
     <div className="flex">
       <SideBar show={show} />
-      <main className="flex-1 bg-base-bg">
+      <main className="flex-1 bg-base-bg max-w-full overflow-hidden">
         <Nav setShow={setShow} show={show} />
         <div className="p-4">
           <Outlet />

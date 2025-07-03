@@ -1,5 +1,6 @@
 import { UserOutlined } from "@ant-design/icons";
 import { RiCustomerServiceLine } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
 
 export const SIDEBAR_DATA = [
   {
@@ -13,5 +14,11 @@ export const SIDEBAR_DATA = [
     name: "Sotuvchilar",
     path: "/seller",
     icon: <UserOutlined className="text-xl" />,
+  },
+  {
+    id: 3,
+    name: "Profile",
+    path: "/profile",
+    icon: <CgProfile className="text-xl" />,
   },
 ];

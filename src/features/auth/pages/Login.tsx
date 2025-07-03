@@ -2,7 +2,6 @@ import { Button, Form, Input, type FormProps, Typography, Alert } from "antd";
 import React from "react";
 import { useAuth } from "../service/useAuth";
 import type { FieldType } from "@/shared/types";
-import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setToken } from "../store/auth.slice";
 import { PatternFormat } from "react-number-format";
@@ -23,7 +22,6 @@ const Login = () => {
     login.mutate(new_login, {
       onSuccess: (res) => {
         dispatch(setToken(res.access_token));
-        toast.success("Logged in successfully!");
       },
     });
   };

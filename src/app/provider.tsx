@@ -6,11 +6,11 @@ import { type ReactNode } from "react";
 import { ConfigProvider, theme } from "antd";
 
 const themeLight = {
-  algorithm: theme.darkAlgorithm,
+  algorithm: theme.defaultAlgorithm,
   token: {
     colorPrimary: "#000",
-    colorBgBase: "#8b8c8b",
-    colorTextBase: "#000",
+    colorBgBase: "#ffffff",
+    colorTextBase: "#1f2937",
     colorSuccess: "#52c41a",
     colorWarning: "#faad14",
     colorError: "#ff4d4f",

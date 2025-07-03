@@ -1,9 +1,9 @@
 import React from "react";
-import TableView from "../table-view/TableView";
+import TableView from "./table-view/TableView";
 import { useParamsHook } from "@/shared/hooks/useParamsHook";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
 import { Pagination } from "antd";
-import CardView from "../card-view/CardView";
+import CardView from "./card-view/CardView";
 
 interface Props {
   data: undefined | any;
@@ -18,9 +18,9 @@ const PartnerWrapper: React.FC<Props> = ({ data, loading }) => {
   return (
     <>
       {matches ? (
-        <CardView data={data?.data} loading={loading} />
+        <CardView data={data} loading={loading} />
       ) : (
-        <TableView data={data?.data} loading={loading} />
+        <TableView data={data} loading={loading} />
       )}
       <div className="mt-6 flex justify-end">
         <Pagination
