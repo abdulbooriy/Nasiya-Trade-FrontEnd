@@ -46,7 +46,7 @@ const Login = () => {
             rules={[{ required: true, message: "Please input your phone!" }]}>
             <PatternFormat
               format="+998 ## ### ## ##"
-              mask={"_"}
+              mask={" "}
               allowEmptyFormatting
               customInput={Input}
               style={{ height: "40px" }}
@@ -71,7 +71,7 @@ const Login = () => {
           {isError && (
             <div className="mb-4">
               <Alert
-                style={{ color: "white", background: "crimson"}}
+                style={{ color: "white", background: "crimson" }}
                 message="Phone number or Password is wrong!"
                 type="error"
               />
