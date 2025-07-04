@@ -18,8 +18,6 @@ const TableView: FC<Props> = ({ data, loading }) => {
   const role = useGetRole();
   const page = getParam("page") || "1";
 
-  console.log(data);
-
   const items: MenuProps["items"] = [
     {
       label: <span>Pin</span>,

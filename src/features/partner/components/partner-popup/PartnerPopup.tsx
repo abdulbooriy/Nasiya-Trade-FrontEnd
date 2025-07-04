@@ -122,7 +122,7 @@ const PartnerPopup: React.FC<Props> = ({
           <Form.Item label={null}>
             <Button
               loading={isPending}
-              className="w-full"
+              className="w-full -mb-5"
               type="primary"
               htmlType="submit"
               style={{ height: "40px" }}>

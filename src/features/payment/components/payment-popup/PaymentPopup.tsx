@@ -64,11 +64,13 @@ const PaymentPopup: FC<Props> = ({ children, id, previousData, role }) => {
             <Form.Item<FieldType>
               label="Summa"
               name="amaunt"
-              rules={[{ required: true, message: "Please input amount!" }]}>
+              rules={[{ required: true, message: "Summani kiriting!" }]}>
               <NumericFormat
                 allowLeadingZeros
                 thousandSeparator={" "}
                 customInput={Input}
+                style={{ height: "40px" }}
+                placeholder="Summani kiriting"
               />
             </Form.Item>
 
@@ -76,7 +78,10 @@ const PaymentPopup: FC<Props> = ({ children, id, previousData, role }) => {
               label="Izoh"
               name="comment"
               rules={[{ required: false }]}>
-              <TextArea />
+              <TextArea
+                style={{ height: "70px" }}
+                placeholder="Izohni kiriting"
+              />
             </Form.Item>
 
             <Form.Item label={null}>
@@ -84,8 +89,9 @@ const PaymentPopup: FC<Props> = ({ children, id, previousData, role }) => {
                 loading={isPending}
                 className="w-full"
                 type="primary"
-                htmlType="submit">
-                Submit
+                htmlType="submit"
+                style={{ height: "40px", marginBottom: "-20px"}}>
+                To'lov qilish
               </Button>
             </Form.Item>
           </Form>
