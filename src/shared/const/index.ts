@@ -1,6 +1,6 @@
 export enum Role {
-  customer = "customer",
-  seller = "seller",
+  customer = "CUSTOMER",
+  seller = "SELLER",
 }
 
 export enum PaymentType {

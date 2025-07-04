@@ -15,8 +15,6 @@ const PartnerWrapper: React.FC<Props> = ({ data, loading }) => {
   const page = getParam("page") || "1";
   const matches = useMediaQuery("768");
 
-  
-
   return (
     <>
       {matches ? (

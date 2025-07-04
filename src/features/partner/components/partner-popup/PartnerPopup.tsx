@@ -3,13 +3,14 @@ import { Button, Input, Modal, Form } from "antd";
 import { PatternFormat } from "react-number-format";
 import { usePartner } from "../../service/usePartner";
 import useGetRole from "@/shared/hooks/useGetRole";
+import { toast } from "react-toastify";
 
 type FieldType = {
-  fullName?: string;
-  address?: string;
+  fullName: string;
+  address: string;
   phone_primary?: string;
-  phone_secondary?: string;
-  role?: string;
+  phone_secondary: string;
+  role: string;
 };
 
 interface Props {
@@ -32,18 +33,23 @@ const PartnerPopup: React.FC<Props> = ({
     const phone_secondary = values.phone_secondary?.replace(/\s/gi, "");
 
     const newPartner = {
-      fullname: values.fullName,
+      fullName: values.fullName,
+      address: values.address,
       role: values.role,
-      adress: values.address,
-      phone: [values.phone_primary?.replace(/\s/gi, "")],
+      phones: [values.phone_primary?.replace(/\s/gi, "")],
     };
 
     if (phone_secondary) {
-      newPartner.phone.push(phone_secondary);
+      newPartner.phones.push(phone_secondary);
     }
 
     createPartners.mutate(newPartner, {
       onSuccess: () => {
+        toast.success(
+          `${
+            role === "SELLER" ? "Sotuvchi" : "Mijoz"
+          } muvaffaqiyatli qo'shildi!`
+        );
         handleCancel();
       },
     });
@@ -52,7 +58,7 @@ const PartnerPopup: React.FC<Props> = ({
     <>
       <Modal
         title={
-          `${role === "seller" ? "Sotuvchi " : "Mijoz "}` +
+          `${role === "SELLER" ? "Sotuvchi " : "Mijoz "}` +
           `${previousData ? "tahrirlash" : "qo'shish"}`
         }
         closable={{ "aria-label": "Custom Close Button" }}
@@ -126,7 +132,7 @@ const PartnerPopup: React.FC<Props> = ({
               type="primary"
               htmlType="submit"
               style={{ height: "40px" }}>
-              Submit
+              Qo'shish
             </Button>
           </Form.Item>
         </Form>
