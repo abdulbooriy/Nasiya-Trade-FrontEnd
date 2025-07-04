@@ -18,6 +18,8 @@ const TableView: FC<Props> = ({ data, loading }) => {
   const role = useGetRole();
   const page = getParam("page") || "1";
 
+  console.log(data);
+
   const items: MenuProps["items"] = [
     {
       label: <span>Pin</span>,
@@ -40,21 +42,21 @@ const TableView: FC<Props> = ({ data, loading }) => {
     },
     {
       title: "Ism",
-      dataIndex: "fullname",
-      key: "fullname",
+      dataIndex: "fullName",
+      key: "fullName",
       render: (text: any, item: any) => {
         return <Link to={`/${role}/${item.id}`}>{text}</Link>;
       },
     },
     {
       title: "Manzil",
-      dataIndex: "adress",
-      key: "adress",
+      dataIndex: "address",
+      key: "address",
     },
     {
       title: "Telefon",
       dataIndex: "phone",
-      key: "adress",
+      key: "phone",
       render: (text: any) => {
         return <TelPopup phoneNumber={text[0]} />;
       },
