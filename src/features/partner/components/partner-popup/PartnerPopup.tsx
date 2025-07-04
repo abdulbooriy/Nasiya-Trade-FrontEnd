@@ -5,7 +5,7 @@ import { usePartner } from "../../service/usePartner";
 import useGetRole from "@/shared/hooks/useGetRole";
 
 type FieldType = {
-  fullname?: string;
+  fullName?: string;
   address?: string;
   phone_primary?: string;
   phone_secondary?: string;
@@ -32,7 +32,7 @@ const PartnerPopup: React.FC<Props> = ({
     const phone_secondary = values.phone_secondary?.replace(/\s/gi, "");
 
     const newPartner = {
-      fullname: values.fullname,
+      fullname: values.fullName,
       role: values.role,
       adress: values.address,
       phone: [values.phone_primary?.replace(/\s/gi, "")],
@@ -67,7 +67,7 @@ const PartnerPopup: React.FC<Props> = ({
           layout="vertical">
           <Form.Item<FieldType>
             label="Ism va Familiya"
-            name="fullname"
+            name="fullName"
             rules={[
               { required: true, message: "Ism va Familiyangizni kiriting!" },
             ]}>
