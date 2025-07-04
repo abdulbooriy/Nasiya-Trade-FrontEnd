@@ -55,8 +55,8 @@ const TableView: FC<Props> = ({ data, loading }) => {
       title: "Telefon",
       dataIndex: "phone",
       key: "phone",
-      render: (text: any) => {
-        return <TelPopup phoneNumber={text[0]} />;
+      render: (text: string) => {
+        return <TelPopup phoneNumber={text} />;
       },
     },
     {
