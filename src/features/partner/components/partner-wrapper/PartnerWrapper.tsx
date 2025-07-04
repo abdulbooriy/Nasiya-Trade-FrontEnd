@@ -15,12 +15,14 @@ const PartnerWrapper: React.FC<Props> = ({ data, loading }) => {
   const page = getParam("page") || "1";
   const matches = useMediaQuery("768");
 
+  
+
   return (
     <>
       {matches ? (
-        <CardView data={data} loading={loading} />
+        <CardView data={data?.partners} loading={loading} />
       ) : (
-        <TableView data={data} loading={loading} />
+        <TableView data={data?.partners} loading={loading} />
       )}
       <div className="mt-6 flex justify-end">
         <Pagination
