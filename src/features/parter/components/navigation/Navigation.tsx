@@ -6,7 +6,7 @@ import useGetRole from "@/shared/hooks/useGetRole";
 import { Role } from "@/shared/const";
 import "./style.css";
 
-const Navigation = () => {
+const Navigation = ({ role: user_role }: { role: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const role = useGetRole();
 
@@ -45,7 +45,11 @@ const Navigation = () => {
         </div>
       </div>
       {isModalOpen && (
-        <PartnerPopup isModalOpen={isModalOpen} handleCancel={handleCancel} />
+        <PartnerPopup
+          user_role={user_role}
+          isModalOpen={isModalOpen}
+          handleCancel={handleCancel}
+        />
       )}
     </>
   );

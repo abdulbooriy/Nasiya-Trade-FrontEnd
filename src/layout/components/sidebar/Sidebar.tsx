@@ -20,7 +20,7 @@ const Sidebar = ({ show }: { show: boolean }) => {
           <li key={item.id}>
             <NavLink
               className={
-                "h-9 p-2 rounded mb-2 sidebar-link flex items-center gap-2"
+                "h-10 p-2 rounded-lg mb-2 sidebar-link flex items-center gap-2"
               }
               to={item.path}
             >

@@ -14,7 +14,7 @@ const themeLight = {
     colorSuccess: "#52c41a",
     colorWarning: "#faad14",
     colorError: "#ff4d4f",
-    borderRadius: 4,
+    borderRadius: 6,
     colorBgContainer: "#fff",
   },
 };
@@ -23,9 +23,8 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        retry: false,
-        // staleTime: 1000 * 60 * 5, // re-fetch vaqti
-        // gcTime: 1000 * 60 * 10, // cache vaqti
+        staleTime: 1000 * 60 * 5,
+        gcTime: 1000 * 60 * 10,
       },
     },
   });

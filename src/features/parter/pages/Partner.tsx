@@ -35,11 +35,11 @@ const Partner = ({ role }: { role: string }) => {
   return (
     <Box>
       <Badge count={data?.total} style={{ backgroundColor: "#000" }}>
-        <Title className={"mb-4"}>
-          {role === "customer" ? "Mijozlar" : "Sotuvchilar"} ro'yhati
+        <Title className={"py-1"}>
+          {role === "CUSTOMER" ? "Mijozlar" : "Sotuvchilar"} ro'yxati
         </Title>
       </Badge>
-      <Navigation />
+      <Navigation role={role}/>
       <Outlet context={{ data, isFetching }} />
     </Box>
   );

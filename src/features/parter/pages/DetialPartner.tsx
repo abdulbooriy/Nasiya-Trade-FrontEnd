@@ -1,11 +1,11 @@
 import Box from "@/shared/ui/Box";
 import Title from "@/shared/ui/Title";
 import React from "react";
-// import { useParams } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 
 const DetialPartner = () => {
-  // const p = useParams()
-  // console.log(p);
+  const { pathname } = useLocation();
+  console.log(pathname);
 
   return (
     <Box>

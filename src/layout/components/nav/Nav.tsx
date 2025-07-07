@@ -1,9 +1,7 @@
-import { usePartner } from "@/features/parter/service/usePartner";
-import type { IParams } from "@/shared/types";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import React, { useEffect, useState, type FC } from "react";
 import { useSearchParams } from "react-router-dom";
+import { LuPanelLeftOpen, LuPanelRightOpen } from "react-icons/lu";
 
 interface Props {
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,7 +12,6 @@ const Nav: FC<Props> = ({ setShow, show }) => {
   const [params, setParams] = useSearchParams();
   const name = params.get("name");
   const [inputSearch, setInputSearch] = useState(name || "");
-  const { getPartners } = usePartner();
 
   useEffect(() => {
     let time = setTimeout(() => {
@@ -30,20 +27,12 @@ const Nav: FC<Props> = ({ setShow, show }) => {
     if (name === "") setParams({});
   }, []);
 
-  const query: IParams = {
-    search: encodeURIComponent(inputSearch),
-  };
-
-  const { data: parnterSearch } = getPartners(query);
-
-  console.log(parnterSearch);
-
   return (
-    <div className="w-full h-14 bg-white sticky top-0 left-0 flex items-center px-4 z-10 border-b border-gray-200 gap-10">
+    <div className="w-full h-14 bg-white sticky top-0 left-0 flex items-center px-4 z-10 border-b border-gray-200 gap-5">
       <button
         onClick={() => setShow((p) => !p)}
-        className="text-xl cursor-pointer">
-        {show ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+        className="text-3xl cursor-pointer">
+        {show ? <LuPanelRightOpen /> : <LuPanelLeftOpen />}
       </button>
       <div>
         <Input
@@ -55,7 +44,7 @@ const Nav: FC<Props> = ({ setShow, show }) => {
             fontSize: "16px",
             borderColor: "gray",
           }}
-          placeholder="search..."
+          placeholder="Qidirish..."
         />
       </div>
     </div>

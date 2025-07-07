@@ -1,6 +1,6 @@
 import React, { type FC, useCallback, useState } from "react";
 import { Modal, Button, Typography } from "antd";
-import { PhoneOutlined } from "@ant-design/icons";
+import { FiPhoneOutgoing } from "react-icons/fi";
 
 const { Text } = Typography;
 
@@ -22,11 +22,11 @@ const TelPopUp: FC<{ phoneNumber: string }> = ({ phoneNumber = "" }) => {
           type="text"
           style={{ padding: "0" }}
           onClick={handleOpenModal}
-          className="flex items-center gap-2  transition-all">
+          className="flex items-center !gap-2.5 transition-all">
+          <FiPhoneOutgoing className="text-lg text-text !text-green-600" />
           <span className="text-base text-text">
             {phoneNumber?.telFormat()}
           </span>
-          <PhoneOutlined className="text-lg text-text" />
         </Button>
         {isModalOpen && (
           <Modal
@@ -43,7 +43,7 @@ const TelPopUp: FC<{ phoneNumber: string }> = ({ phoneNumber = "" }) => {
             <div className="mt-5 space-y-3">
               <a href={`tel:${phoneNumber}`} className="block">
                 <Button type="primary" block>
-                  <PhoneOutlined className="text-lg text-text" />
+                  <FiPhoneOutgoing className="text-lg text-text !text-green-500" />
                   <span>Qo'ng'iroq qilish</span>
                 </Button>
               </a>

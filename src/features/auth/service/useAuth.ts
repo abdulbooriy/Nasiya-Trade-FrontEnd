@@ -10,6 +10,7 @@ export const useAuth = () => {
     useQuery({
       queryKey: [key],
       queryFn: () => api.get("/auth/me").then((res) => res.data),
+      retry: false,
     });
 
   const login = useMutation({

@@ -1,7 +1,7 @@
 import { usePartner } from "@/features/parter/service/usePartner";
-import { MoreOutlined } from "@ant-design/icons";
-import { Button, Dropdown, type MenuProps } from "antd";
+import { Dropdown, type MenuProps } from "antd";
 import React from "react";
+import { FiMoreVertical } from "react-icons/fi";
 
 const PartnerOptions = ({ item }: { item: any }) => {
   const { updatePartner } = usePartner();
@@ -33,9 +33,7 @@ const PartnerOptions = ({ item }: { item: any }) => {
   ];
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
-      <Button>
-        <MoreOutlined />
-      </Button>
+      <FiMoreVertical className="cursor-pointer" size={25} color="#000" />
     </Dropdown>
   );
 };

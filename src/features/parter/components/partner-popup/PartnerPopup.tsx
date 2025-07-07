@@ -9,12 +9,14 @@ interface Props {
   isModalOpen: boolean;
   handleCancel: () => void;
   previousData?: any;
+  user_role: string;
 }
 
 const PartnerPopup: React.FC<Props> = ({
   handleCancel,
   isModalOpen,
   previousData,
+  user_role,
 }) => {
   const role = useGetRole();
   const { createPartner } = usePartner();
@@ -45,7 +47,7 @@ const PartnerPopup: React.FC<Props> = ({
     <>
       <Modal
         title={
-          `${role === "SELLER" ? "Sotuvchi " : "Mijoz "}` +
+          `${user_role === "SELLER" ? "Sotuvchi " : "Mijoz "}` +
           `${previousData ? "tahrirlash" : "qo'shish"}`
         }
         closable={{ "aria-label": "Custom Close Button" }}

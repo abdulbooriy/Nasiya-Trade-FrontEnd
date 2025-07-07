@@ -50,7 +50,7 @@ const CardView: FC<Props> = ({ data, loading }) => {
             <TelPopup phoneNumber={item?.phones[0]} />
             <div>
               <PaymentPopup id={item?.id} role={role}>
-                <Button>To'lov</Button>
+                <Button type="primary">To'lov</Button>
               </PaymentPopup>
             </div>
           </div>
