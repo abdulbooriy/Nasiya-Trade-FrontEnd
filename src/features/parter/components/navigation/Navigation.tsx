@@ -29,12 +29,12 @@ const Navigation = ({ role: user_role }: { role: string }) => {
           </NavLink>
           <NavLink
             className={"navigation-link  py-0.5 text-gray-500 relative"}
-            to={role === Role.customer ? "customer/archive" : "archive"}>
+            to={role === Role.customer ? "CUSTOMER/archive" : "archive"}>
             Arxivdagilar
           </NavLink>
           <NavLink
             className={"navigation-link  py-0.5 text-gray-500 relative"}
-            to={role === Role.customer ? "customer/disabled" : "disabled"}>
+            to={role === Role.customer ? "CUSTOMER/disabled" : "disabled"}>
             O'chirilganlar
           </NavLink>
         </div>

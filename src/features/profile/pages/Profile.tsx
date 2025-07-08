@@ -8,8 +8,6 @@ const Profile = () => {
   const { getMe } = useAuth();
   const { data } = getMe();
 
-  console.log(data);
-
   return (
     <Box>
       <Title>Shaxsiy Ma'lumotlar</Title>

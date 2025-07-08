@@ -39,7 +39,7 @@ const Partner = ({ role }: { role: string }) => {
           {role === "CUSTOMER" ? "Mijozlar" : "Sotuvchilar"} ro'yxati
         </Title>
       </Badge>
-      <Navigation role={role}/>
+      <Navigation role={role} />
       <Outlet context={{ data, isFetching }} />
     </Box>
   );

@@ -20,6 +20,12 @@ export const usePartner = () => {
       gcTime: 1000 * 60 * 10,
     });
 
+  const getPartner = (id: string) =>
+    useQuery({
+      queryKey: [partner, id],
+      queryFn: () => api.get(`/partner/${id}`).then((res) => res.data),
+    });
+
   const createPartner = useMutation({
     mutationFn: (body: any) =>
       api.post("/partner", body).then((res) => res.data),
@@ -36,5 +42,5 @@ export const usePartner = () => {
     },
   });
 
-  return { getPartners, createPartner, updatePartner };
+  return { getPartners, createPartner, updatePartner, getPartner };
 };
