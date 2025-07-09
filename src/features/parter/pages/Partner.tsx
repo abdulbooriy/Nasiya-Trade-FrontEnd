@@ -12,13 +12,14 @@ const Partner = ({ role }: { role: string }) => {
   const { getPartners } = usePartner();
   const { getParam } = useParamsHook();
   const page = getParam("page") || "1";
+  const search = getParam("search") || "";
   const { pathname } = useLocation();
   const typeName = pathname.split("/")[2] || "active";
 
   const query: IParams = {
     role,
     page,
-    order: "desc",
+    order: "asc",
     isArchive: false,
     isActive: "true",
   };
@@ -28,6 +29,9 @@ const Partner = ({ role }: { role: string }) => {
   }
   if (typeName === "disabled") {
     query.isActive = "false";
+  }
+  if (search) {
+    query.search = search;
   }
 
   const { data, isFetching } = getPartners(query);

@@ -77,13 +77,18 @@ const TableView: FC<Props> = ({ data, loading }) => {
       },
     },
     {
+      title: "Roli",
+      dataIndex: "role",
+      key: "role",
+    },
+    {
       title: "Boshqaruv",
       dataIndex: "option",
       key: "option",
       render: (_text: any, item: any) => {
         return (
           <div className="flex gap-2 justify-end items-center">
-            <PartnerOptions  item={item} />
+            <PartnerOptions item={item} />
             <PaymentPopup role={role} id={item.id}>
               <Button type="primary">To'lov</Button>
             </PaymentPopup>

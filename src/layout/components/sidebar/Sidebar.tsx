@@ -7,8 +7,7 @@ const Sidebar = ({ show }: { show: boolean }) => {
   return (
     <aside
       data-collapse={show}
-      className=" h-screen overflow-auto sticky top-0 left-0 bg-white p-4 border-r border-gray-200"
-    >
+      className=" h-screen overflow-auto sticky top-0 left-0 bg-white p-4 border-r border-gray-200">
       <div className="flex gap-3 items-center h-10">
         <p className="text-2xl bg-black text-white size-8 min-w-8 flex justify-center items-center rounded-xl">
           B
@@ -22,8 +21,7 @@ const Sidebar = ({ show }: { show: boolean }) => {
               className={
                 "h-10 p-2 rounded-lg mb-2 sidebar-link flex items-center gap-2"
               }
-              to={item.path}
-            >
+              to={item.path}>
               {item.icon}
               <span className="sidebar-item">{item.name}</span>
             </NavLink>

@@ -14,7 +14,7 @@ export const SIDEBAR_DATA = [
   {
     id: 2,
     name: "Sotuvchilar",
-    path: "/seller",
+    path: "/SELLER",
     icon: <UserDeleteOutlined className="text-xl" />,
   },
   {
