@@ -19,6 +19,7 @@ export const useAuth = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [key] });
     },
+    retry: false,
   });
 
   return { login, getMe };

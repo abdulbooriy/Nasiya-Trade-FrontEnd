@@ -5,7 +5,6 @@ import GuestRoute from "@/shared/components/router/GuestRoute";
 import { Role } from "@/shared/const";
 import { useSelector } from "react-redux";
 import type { RootState } from "./store";
-// import MainLayout from "@/layout/MainLayout";
 
 const MainLayout = lazy(() => import("@/layout/MainLayout"));
 const Partner = lazy(() => import("@/features/parter/pages/Partner"));

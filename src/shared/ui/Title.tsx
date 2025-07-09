@@ -1,9 +1,17 @@
-import React, { type ReactNode } from 'react'
+import React, { type ReactNode } from "react";
 
-const Title = ({children, className}:{children:ReactNode, className?:undefined | string}) => {
+const Title = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: undefined | string;
+}) => {
   return (
-    <h2 className={`text-2xl font-semibold ${className ? className : ""}`}>{children}</h2>
-  )
-}
+    <h2 className={`text-2xl font-semibold ${className ? className : ""}`}>
+      {children}
+    </h2>
+  );
+};
 
-export default React.memo(Title)
+export default React.memo(Title);

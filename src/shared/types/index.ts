@@ -20,7 +20,7 @@ export interface IParams {
   page?: string;
   limit?: string;
   search?: string;
-  role?: string;
+  role: string;
   isActive?: string;
   isArchive?: boolean;
   order?: "asc" | "desc";

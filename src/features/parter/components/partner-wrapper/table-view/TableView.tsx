@@ -10,8 +10,8 @@ import PartnerOptions from "../partner-options/PartnerOptions";
 import { PushpinOutlined } from "@ant-design/icons";
 
 interface Props {
-  data?: undefined | any;
-  loading?: boolean;
+  data: undefined | any;
+  loading: boolean;
 }
 
 const TableView: FC<Props> = ({ data, loading }) => {
@@ -75,11 +75,6 @@ const TableView: FC<Props> = ({ data, loading }) => {
           </b>
         );
       },
-    },
-    {
-      title: "Roli",
-      dataIndex: "role",
-      key: "role",
     },
     {
       title: "Boshqaruv",

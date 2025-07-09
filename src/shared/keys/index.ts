@@ -1,2 +1,2 @@
-export const payment = "payment"
-export const partner = "partner"
+export const payment = "payment";
+export const partner = "partner";
