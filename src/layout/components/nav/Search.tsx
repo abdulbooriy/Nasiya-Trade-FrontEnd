@@ -9,10 +9,11 @@ const allowedSecondPath = ["active", "archive", "disabled"];
 
 const SearchSeaction = () => {
   const { pathname } = useLocation();
+  const { setParam, removeParam, getParam } = useParamsHook();
+  const search = getParam("search") || "";
+  const [inputValue, setInputValue] = useState<string>(search);
   const firstPath = pathname.split("/")[1] || "CUSTOMER";
   const secondePath = pathname.split("/")[2] || "active";
-  const [inputValue, setInputValue] = useState<string>("");
-  const { setParam, removeParam } = useParamsHook();
   const debouncedValue = useDebounce(inputValue);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const SearchSeaction = () => {
             firstPath === "CUSTOMER" ? "Mijoz" : "Sotuvchi"
           } qidirish...`}
           onChange={handleSearch}
+          value={inputValue}
         />
       ) : (
         <></>
