@@ -33,12 +33,12 @@ const SearchSeaction = () => {
       {allowedFirstPath.includes(firstPath) &&
       allowedSecondPath.includes(secondePath) ? (
         <Input.Search
-          style={{ width: 400 }}
           placeholder={`${
             firstPath === "CUSTOMER" ? "Mijoz" : "Sotuvchi"
           } qidirish...`}
           onChange={handleSearch}
           value={inputValue}
+          style={{ width: 400 }}
         />
       ) : (
         <></>

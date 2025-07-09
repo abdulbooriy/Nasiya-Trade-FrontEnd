@@ -11,9 +11,10 @@ const Partner = lazy(() => import("@/features/parter/pages/Partner"));
 const PartnerChild = lazy(() => import("@/features/parter/pages/PartnerChild"));
 const Login = lazy(() => import("@/features/auth/pages/Login"));
 const DetialPartner = lazy(
-  () => import("@/features/parter/pages/DetialPartner")
+  () => import("@/features/parter/pages/detail/DetialPartner")
 );
 const Profile = lazy(() => import("@/features/profile/pages/Profile"));
+const Product = lazy(() => import("@/features/products/pages/Product"));
 
 const AppRouter = () => {
   const isAuth = !!useSelector((state: RootState) => state.auth.token);
@@ -61,6 +62,10 @@ const AppRouter = () => {
               element: <PartnerChild />,
             },
           ],
+        },
+        {
+          path: "product",
+          element: <Product />,
         },
         {
           path: "profile",

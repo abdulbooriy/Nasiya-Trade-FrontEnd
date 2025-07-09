@@ -1,13 +1,11 @@
-import { MoreOutlined } from "@ant-design/icons";
-import { Button, Dropdown } from "antd";
+import { Dropdown } from "antd";
 import React from "react";
+import { TfiMoreAlt } from "react-icons/tfi";
 
 const Options = ({ items }: { items: any }) => {
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
-      <Button>
-        <MoreOutlined />
-      </Button>
+      <TfiMoreAlt className="cursor-pointer" size={25} color="#000" />
     </Dropdown>
   );
 };

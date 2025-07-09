@@ -19,18 +19,18 @@ const Navigation = ({ role: user_role }: { role: string }) => {
   }, []);
   return (
     <>
-      <div className="mb-4 flex justify-between">
+      <div className="mb-3.5 flex justify-between">
         <div className="flex gap-4">
           <NavLink
             end={true}
             className={"navigation-link  py-0.5 text-gray-500 relative"}
             to={role === Role.customer ? "/" : ""}>
-            Aktivdagilar
+            Faol bo'lganlar
           </NavLink>
           <NavLink
             className={"navigation-link  py-0.5 text-gray-500 relative"}
             to={role === Role.customer ? "CUSTOMER/archive" : "archive"}>
-            Arxivdagilar
+            Arxivlar
           </NavLink>
           <NavLink
             className={"navigation-link  py-0.5 text-gray-500 relative"}

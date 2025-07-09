@@ -1,7 +1,8 @@
 import {
+  SettingOutlined,
   UserAddOutlined,
   UserDeleteOutlined,
-  UserOutlined,
+  ProductOutlined,
 } from "@ant-design/icons";
 
 export const SIDEBAR_DATA = [
@@ -19,8 +20,14 @@ export const SIDEBAR_DATA = [
   },
   {
     id: 3,
-    name: "Profile",
+    name: "Mahsulotlar",
+    path: "/product",
+    icon: <ProductOutlined className="text-xl" />,
+  },
+  {
+    id: 4,
+    name: "Sozlamalar",
     path: "/profile",
-    icon: <UserOutlined className="text-xl" />,
+    icon: <SettingOutlined className="text-xl" />,
   },
 ];
