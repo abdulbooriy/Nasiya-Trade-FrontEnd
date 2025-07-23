@@ -30,6 +30,7 @@ const Partner = ({ role }: { role: string }) => {
   if (typeName === "disabled") {
     query.isActive = "false";
   }
+
   if (search) {
     query.search = search;
   }

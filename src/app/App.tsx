@@ -1,15 +1,15 @@
-import AppProvider from "./provider"
-import AppRouter from "./router"
+import AppProvider from "./provider";
+import AppRouter from "./router";
 import Suspense from "@/shared/components/fallback/SuspenseContainer";
 
 const App = () => {
   return (
     <AppProvider>
       <Suspense>
-        <AppRouter/>
+        <AppRouter />
       </Suspense>
     </AppProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
